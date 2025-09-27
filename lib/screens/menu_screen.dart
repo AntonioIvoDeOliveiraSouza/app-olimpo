@@ -18,7 +18,11 @@ class MenuScreen extends StatelessWidget {
       drawer: Drawer(), //TODO: Elaborar Sidedrawer
 
       body: Center(//Center Logo
-        child: Image.asset('lib/data/images/logo.png'),
+        child: Image.asset(
+          'lib/data/images/logo.png',
+          width: 200,
+          height: 200,
+          ),
       ), 
 
       bottomNavigationBar: BottomAppBar(//Bottom Navigation Bar
