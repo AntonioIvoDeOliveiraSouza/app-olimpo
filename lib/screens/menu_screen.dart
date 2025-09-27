@@ -17,8 +17,8 @@ class MenuScreen extends StatelessWidget {
 
       drawer: Drawer(), //TODO: Elaborar Sidedrawer
 
-      body: const Center(//Center Logo
-        child: Text("TELA INICIAL")
+      body: Center(//Center Logo
+        child: Image.asset('lib/data/images/logo.png'),
       ), 
 
       bottomNavigationBar: BottomAppBar(//Bottom Navigation Bar
