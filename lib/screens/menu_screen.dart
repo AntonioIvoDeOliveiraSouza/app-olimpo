@@ -5,6 +5,22 @@ class MenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Olimpo",
+          style: TextStyle(color: Colors.white),
+        ),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.blue,
+      ),
+
+      drawer: Drawer(), //TODO: Elaborar Sidedrawer
+
+      body: const Center(
+        child: Text("TELA INICIAL")
+      ), 
+
+    );
   }
 }
