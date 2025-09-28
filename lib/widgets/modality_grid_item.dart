@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:olimpo/models/modality.dart';
+import 'package:olimpo/screens/sport.dart';
 
 class ModalityGridItem extends StatelessWidget {
   const ModalityGridItem({
@@ -29,7 +30,15 @@ class ModalityGridItem extends StatelessWidget {
         Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) {
+                  return SportScreen(
+                    sport: modality,
+                  );
+                }),
+              );
+            },
             splashColor: Theme.of(context).primaryColor.withValues(alpha: 0.6),
             highlightColor: Theme.of(context).primaryColor.withValues(alpha:0.3 ),
             borderRadius: BorderRadius.circular(16),
