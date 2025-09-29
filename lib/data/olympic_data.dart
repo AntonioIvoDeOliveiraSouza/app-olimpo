@@ -121,8 +121,57 @@ const listAthlete = [
   Athlete(
   id: 'a1', 
   title: 'Sarah Menezes', 
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sarah_Menezes_2015.jpg/800px-Sarah_Menezes_2015.jpg', 
+  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sarah_Menezes_Homenagem_Min_Esporte.jpg/1024px-Sarah_Menezes_Homenagem_Min_Esporte.jpg', 
   biography: 'Sarah Menezes, nascida em Teresina em 1989, entrou para a história do esporte brasileiro ao conquistar a medalha de ouro no judô na categoria até 48 kg nos Jogos Olímpicos de Londres 2012, tornando-se a primeira mulher do país a alcançar tal feito na modalidade. Revelada em projetos sociais no Piauí, ela consolidou sua carreira com títulos em campeonatos mundiais e pan-americanos, tornando-se referência de superação e inspiração para jovens atletas, especialmente mulheres no judô.', 
   honors: '- Olimpíadas de Londres 2012 - Medalha de Ouro\n- Mundial de Judô (Rio de Janeiro 2013) - Medalha de Prata\n- Mundial de Judô (Paris 2011) - Medalha de Bronze\n- Jogos Panamericanos de Guadalajara 2011 - Medalha de Ouro',
+  ),
+  Athlete(
+    id: 'a2',
+    title: 'Ítalo Ferreira',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/60/%C3%8Dtalo_Ferreira_durante_a_competi%C3%A7%C3%A3o.jpg',
+    biography: 'Ítalo Ferreira, nascido em Baía Formosa, Rio Grande do Norte, em 1994, tornou-se uma referência do surfe brasileiro ao conquistar a medalha de ouro nos Jogos Olímpicos de Tóquio 2020, primeira edição do surfe como esporte olímpico. Revelado nas praias potiguares e campeão do World Surf League em 2019, Ítalo é conhecido por seu estilo agressivo e aéreo, inspirando uma nova geração de surfistas brasileiros e colocando o país no mapa mundial do surfe competitivo.',
+    honors: '- Olimpíadas de Tóquio 2020 - Medalha de Ouro\n- Circuito Mundial de Surfe (WSL 2019) - Medalha de Ouro',
+  ),
+  Athlete(
+    id: 'a3', 
+    title: 'Rebeca Andrade', 
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Rebeca_Andrade_Rio_2016.jpg/800px-Rebeca_Andrade_Rio_2016.jpg', 
+    biography: 'Rebeca Andrade, nascida em Guarulhos, São Paulo, em 1999, é uma das maiores ginastas brasileiras da história. Especialista em salto e solo, conquistou a medalha de prata no individual geral e o ouro no salto nos Jogos Olímpicos de Tóquio 2020, tornando-se a primeira ginasta do Brasil a ganhar uma medalha olímpica no individual geral. Com conquistas em campeonatos mundiais e Pan-Americanos, Rebeca é referência de superação, dedicação e inspiração para jovens atletas no Brasil e no mundo.', 
+    honors: '- Olimpíadas de Paris 2024 - Medalha de Ouro:Solo\n- Olimpíadas de Paris 2024 - Medalha de Prata:Salto \n- Olimpíadas de Tóquio 2020 - Medalha de Ouro:Salto\n- Olimpíadas de Tóquio 2020 - Medalha de Prata:Individual'
+  ),
+  Athlete(
+    id: 'a4',
+    title: 'César Cielo',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Cesar_Cielo_in_2012_Summer_Olympics.jpg', 
+    biography: 'César Cielo, nascido em Santa Bárbara d`Oeste, São Paulo, em 1987, é o maior nadador brasileiro da história em provas de velocidade. Especialista em 50m e 100m livre, conquistou três medalhas olímpicas e estabeleceu recordes mundiais, tornando-se referência mundial no sprint da natação. Com títulos em Campeonatos Mundiais, Jogos Pan-Americanos e participação em quatro edições olímpicas, Cielo é ícone do esporte brasileiro e inspiração para gerações de nadadores.', 
+    honors: '- Olimpíadas de Londres 2012 - Medalha de Ouro:50m livre\n- Olimpíadas de Pequim 2008 - Medalha de Bronze:100m livre\n- Olimpíadas de Pequim 2008 - Medalha de Bronze:50m livre',
+  ),
+  Athlete(
+    id: 'a5', 
+    title: 'Daniel Dias', 
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Daniel_Dias_Rio2016b.jpg', 
+    biography: 'Daniel Dias, nascido em Campinas, São Paulo, em 1988, é considerado um dos maiores atletas paralímpicos do Brasil e do mundo. Nascido com má-formação congênita nos membros superiores, Daniel transformou a natação em sua paixão e carreira, conquistando dezenas de medalhas em Jogos Paralímpicos e Campeonatos Mundiais. Reconhecido por sua força, técnica e superação, ele se tornou inspiração para atletas com deficiência e referência da excelência esportiva paralímpica.', 
+    honors: '- Paralimpíadas de Pequim 2008 - Medalhas de Ouro: 50m livre, 100m livre, 200m livre, 50m borboleta\n- Paralimpíadas de Londres 2012 - Medalhas de Ouro: 50m livre, 200m medley'
+  ),
+  Athlete(
+    id: 'a6',
+    title: 'Natália Falavigna',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Natalia_Falavigna.jpg',
+    biography: 'Natália Falavigna, nascida em Curitiba, Paraná, em 1984, é uma das pioneiras do taekwondo brasileiro e primeira mulher do país a conquistar uma medalha olímpica na modalidade. Ela ganhou o bronze nos Jogos Olímpicos de Pequim 2008 na categoria peso pesado feminino, consolidando-se como referência do esporte no Brasil. Ao longo da carreira, Natália também conquistou títulos em Campeonatos Mundiais, Jogos Pan-Americanos e Sul-Americanos, inspirando gerações de atletas de taekwondo e elevando o nível da modalidade no país.',
+    honors: '- Olimpíadas de Pequim 2008 - Medalha de Bronze: Peso Pesado\n- Panamericano do Rio 2007 - Medalha de Prata\n- Campeonato Mundial de Taekwondo de Madrid 2005 - Medalha de Ouro',
+  ),
+  Athlete(
+    id: 'a7', 
+    title: 'Robson Conceição', 
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Rio_2016_Olympic_Games_-_Medal_Ceremonies_%2828928697962%29.png', 
+    biography: 'Robson Conceição, nascido em Salvador, Bahia, em 1988, é o primeiro e único boxeador brasileiro a conquistar uma medalha de ouro olímpica. Ele brilhou nos Jogos Olímpicos Rio 2016 na categoria peso leve (60 kg), garantindo o ouro em casa e marcando a história do boxe brasileiro. Revelado em torneios nacionais e sul-americanos, Robson também conquistou medalhas em campeonatos pan-americanos e mundiais, tornando-se referência de disciplina, técnica e superação no esporte.', 
+    honors: '- Olimpíadas de Rio 2016 - Medalha de Ouro: Peso Livre\n- Panamericano de Guadalajara 2011 - Medalha de Ouro\n- Panamericano de Toronto 2015 - Medalha de Ouro',
+  ),
+  Athlete(
+    id: 'a8',
+    title: 'Rayssa Leal',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rayssa_Leal_ap%C3%B3s_receber_a_medalha.jpg/1024px-Rayssa_Leal_ap%C3%B3s_receber_a_medalha.jpg',
+    biography: 'Rayssa Leal, nascida em Imperatriz, Maranhão, em 2008, é uma das maiores revelações do skate mundial e referência do esporte brasileiro nas Olimpíadas. Conhecida como a “Fadinha do Skate” desde os 7 anos, Rayssa conquistou medalhas em competições internacionais de skate street, incluindo os Jogos Olímpicos de Tóquio 2020, onde ganhou a medalha de prata, tornando-se a atleta brasileira mais jovem a subir ao pódio olímpico. Com vitórias em campeonatos mundiais e eventos da World Skate, Rayssa inspira uma nova geração de skatistas e consolidou o Brasil como potência no skate feminino.',
+    honors: '- Olimpíadas de Paris 2024 - Medalha de Bronze\n- Panamericano de Santiago 2023 - Medalha de Ouro\n- Olimpíadas de Tóquio 2020 - Medalha de Prata\n',
   )
 ];
