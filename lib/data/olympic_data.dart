@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:olimpo/models/modality.dart';
+import 'package:olimpo/models/athlete.dart';
 
 const listModality = [
   Modality(
@@ -115,3 +116,5 @@ const listModality = [
     rules: 'Inclui quatro estilos: livre, costas, peito e borboleta, além de medley. As provas variam de 50m a 1500m. Cada estilo tem regras específicas para viradas, saídas e técnicas. Vence o nadador que tocar a plataforma eletrônica no menor tempo. São desclassificados os que cometerem saídas falsas.',
   ),
 ];
+
+const listAthlete = [];
