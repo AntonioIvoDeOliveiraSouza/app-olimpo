@@ -121,7 +121,7 @@ const listAthlete = [
   Athlete(
   id: 'a1', 
   title: 'Sarah Menezes', 
-  imageUrl: 'https://commons.wikimedia.org/wiki/File:Sarah_Menezes_2015.jpg', 
+  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sarah_Menezes_2015.jpg/800px-Sarah_Menezes_2015.jpg', 
   biography: 'Sarah Menezes, nascida em Teresina em 1989, entrou para a história do esporte brasileiro ao conquistar a medalha de ouro no judô na categoria até 48 kg nos Jogos Olímpicos de Londres 2012, tornando-se a primeira mulher do país a alcançar tal feito na modalidade. Revelada em projetos sociais no Piauí, ela consolidou sua carreira com títulos em campeonatos mundiais e pan-americanos, tornando-se referência de superação e inspiração para jovens atletas, especialmente mulheres no judô.', 
   honors: '- Olimpíadas de Londres 2012 - Medalha de Ouro\n- Mundial de Judô (Rio de Janeiro 2013) - Medalha de Prata\n- Mundial de Judô (Paris 2011) - Medalha de Bronze\n- Jogos Panamericanos de Guadalajara 2011 - Medalha de Ouro',
   )
