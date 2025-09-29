@@ -1,3 +1,4 @@
+import 'package:olimpo/screens/bio_athletes.dart';
 import 'package:olimpo/widgets/modality_grid_item.dart';
 import 'package:flutter/material.dart';
 import 'package:olimpo/data/olympic_data.dart';
@@ -28,7 +29,7 @@ class AthletesScreen extends StatelessWidget {
               item: athlete,
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => SportScreen(sport: modality)),
+                  MaterialPageRoute(builder: (_) => BioAthletes(bioathlete: athlete)),
                 );
               }
             )
