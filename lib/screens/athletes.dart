@@ -24,7 +24,14 @@ class AthletesScreen extends StatelessWidget {
         ),
         children: [
           for (final athlete in listAthlete)
-            ModalityGridItem(athlete: athlete)
+            GridItem(
+              item: athlete,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => SportScreen(sport: modality)),
+                );
+              }
+            )
         ],
       ),
       bottomNavigationBar: NavBar(parentContext: context),
