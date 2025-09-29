@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olimpo/screens/athletes.dart';
 import 'package:olimpo/screens/modalities.dart';
 
 class NavBar extends StatelessWidget {
@@ -26,7 +27,13 @@ class NavBar extends StatelessWidget {
             ),
             IconButton(
               icon: Icon(Icons.sports_gymnastics),
-              onPressed: () => print("Atletas aqui"),
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  parentContext,
+                  MaterialPageRoute(builder: (context) => const AthletesScreen()),
+                  (route) => route.isFirst,
+                );
+              }
             ),
           ],
         ),
