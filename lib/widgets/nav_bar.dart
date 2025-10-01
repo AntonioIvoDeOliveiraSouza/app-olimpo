@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:olimpo/screens/athletes.dart';
-import 'package:olimpo/screens/modalities.dart';
+import 'package:olimpo/screens/athletes_screen.dart';
+import 'package:olimpo/screens/modalities_screen.dart';
 
 class NavBar extends StatelessWidget {
   final BuildContext parentContext;
