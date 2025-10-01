@@ -121,7 +121,7 @@ const listAthlete = [
   Athlete(
     id: 'a1', 
     title: 'Sarah Menezes', 
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sarah_Menezes_Homenagem_Min_Esporte.jpg/1024px-Sarah_Menezes_Homenagem_Min_Esporte.jpg', 
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Competitions_in_judo_at_the_2016_Olympics_06.jpg', 
     biography: 'Sarah Menezes, nascida em Teresina em 1989, entrou para a história do esporte brasileiro ao conquistar a medalha de ouro no judô na categoria até 48 kg nos Jogos Olímpicos de Londres 2012, tornando-se a primeira mulher do país a alcançar tal feito na modalidade. Revelada em projetos sociais no Piauí, ela consolidou sua carreira com títulos em campeonatos mundiais e pan-americanos, tornando-se referência de superação e inspiração para jovens atletas, especialmente mulheres no judô.', 
     honors: '- Olimpíadas de Londres 2012 - Medalha de Ouro\n- Mundial de Judô (Rio de Janeiro 2013) - Medalha de Prata\n- Mundial de Judô (Paris 2011) - Medalha de Bronze\n- Jogos Panamericanos de Guadalajara 2011 - Medalha de Ouro',
   ),
@@ -173,5 +173,33 @@ const listAthlete = [
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rayssa_Leal_ap%C3%B3s_receber_a_medalha.jpg/1024px-Rayssa_Leal_ap%C3%B3s_receber_a_medalha.jpg',
     biography: 'Rayssa Leal, nascida em Imperatriz, Maranhão, em 2008, é uma das maiores revelações do skate mundial e referência do esporte brasileiro nas Olimpíadas. Conhecida como a “Fadinha do Skate” desde os 7 anos, Rayssa conquistou medalhas em competições internacionais de skate street, incluindo os Jogos Olímpicos de Tóquio 2020, onde ganhou a medalha de prata, tornando-se a atleta brasileira mais jovem a subir ao pódio olímpico. Com vitórias em campeonatos mundiais e eventos da World Skate, Rayssa inspira uma nova geração de skatistas e consolidou o Brasil como potência no skate feminino.',
     honors: '- Olimpíadas de Paris 2024 - Medalha de Bronze\n- Panamericano de Santiago 2023 - Medalha de Ouro\n- Olimpíadas de Tóquio 2020 - Medalha de Prata\n',
+  ),
+  Athlete(
+    id: 'a9',
+    title: 'Neymar Jr.',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Brasil_conquista_primeiro_ouro_ol%C3%ADmpico_nos_penaltis_1039248-20082016-_mg_0015.jpg',
+    biography: 'Neymar da Silva Santos Júnior, nascido em Mogi das Cruzes, São Paulo, em 1992, é um dos maiores nomes do futebol brasileiro contemporâneo e figura central nas conquistas olímpicas da seleção. Sua participação nos Jogos Olímpicos marcou a trajetória do futebol brasileiro: após conquistar a medalha de prata em Londres 2012, liderou a equipe rumo ao inédito ouro olímpico nos Jogos do Rio 2016, em pleno Maracanã, convertendo o pênalti decisivo contra a Alemanha e entrando para a história.',
+    honors: '- Olimpíadas de Londres 2012 - Medalha de Prata\n- Olimpíadas do Rio 2016 - Medalha de Ouro'
+  ),
+  Athlete(
+    id: 'a10',
+    title: 'Vanderlei Cordeiro',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Vanderlei-Cordeiro-de-Lima-ABr-3.jpg',
+    biography: 'Vanderlei Cordeiro de Lima, nascido em Cruzeiro do Oeste, Paraná, em 1969, é um dos maiores nomes do atletismo brasileiro e símbolo de espírito olímpico. Especialista em maratonas, conquistou a medalha de bronze nos Jogos Olímpicos de Atenas 2004, em uma das histórias mais marcantes do esporte: liderava a prova quando foi interrompido por um invasor, mas ainda assim retomou a corrida e terminou em terceiro lugar, sendo aplaudido mundialmente pela coragem e dignidade. Pelo gesto, recebeu a raríssima Medalha Pierre de Coubertin, concedida pelo Comitê Olímpico Internacional, tornando-se um ícone de fair play. Em 2016, foi o escolhido para acender a pira olímpica na abertura dos Jogos do Rio, coroando sua trajetória.',
+    honors: '- Olimpíadas de Atenas 2004 - Medalha Pierre de Coubertin \n- Olimpíadas de Atenas 2004 - Medalha de Bronze\n- Panamericano de Santo Domingo 2003 - Medalha de Ouro'
+  ),
+  Athlete(
+    id: 'a11',
+    title: 'Yane Marques',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Yane_Marques_London_2012.jpg',
+    biography: 'Yane Marques, nascida em Afogados da Ingazeira, Pernambuco, em 1984, é uma das maiores representantes brasileiras do pentatlo moderno. Com força, técnica e resistência, conquistou a medalha de bronze nos Jogos Olímpicos de Londres 2012, tornando-se a primeira mulher brasileira a conquistar uma medalha olímpica no pentatlo moderno. Ao longo da carreira, Yane acumulou títulos em Jogos Pan-Americanos e campeonatos mundiais, consolidando-se como referência do esporte feminino no Brasil.',
+    honors: '- Olimpíadas de Londres 2012 - Medalha de Bronze\n- Panamericano de Toronto 2015 - Medalha de Ouro\n- Panamericano do Rio 2007 - Medalha de Ouro'
+  ),
+  Athlete(
+    id: 'a12',
+    title: 'Marta',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Futebol_feminino_ol%C3%ADmpico-_Brasil_e_Su%C3%A9cia_no_Maracan%C3%A3_%2829033096805%29.jpg',
+    biography: 'Marta Vieira da Silva, nascida em Dois Riachos, Alagoas, em 1986, é considerada uma das maiores jogadoras de futebol de todos os tempos. Referência mundial, conquistou inúmeros títulos individuais e coletivos, incluindo quatro medalhas olímpicas com a seleção brasileira. Conhecida por sua habilidade, visão de jogo e faro de gol, Marta ajudou a colocar o futebol feminino brasileiro em destaque nos palcos internacionais, sendo inspiração para gerações de atletas.',
+    honors: '- Olimpíadas de Atenas 2004 - Medalha de Prata\n- Olimpíadas de Pequim 2008 - Medalha de Prata\n- Olimpíadas de Paris 2024 - Medalha de Prata'
   )
 ];
