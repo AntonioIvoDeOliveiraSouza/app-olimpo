@@ -18,7 +18,7 @@ class GridItem extends StatelessWidget {
         ShaderMask(
           shaderCallback: (bounds){
             return LinearGradient(
-              colors: [Colors.transparent, Colors.black.withOpacity(0.7)],
+              colors: [Colors.transparent, Colors.black.withValues(alpha:0.7)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ).createShader(bounds);
