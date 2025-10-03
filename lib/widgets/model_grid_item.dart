@@ -15,22 +15,24 @@ class GridItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ShaderMask(
-          shaderCallback: (bounds){
-            return LinearGradient(
-              colors: [Colors.transparent, Colors.black.withValues(alpha:0.7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ).createShader(bounds);
-          },
-          blendMode: BlendMode.darken,
-          child: Image.network(
-            item.imageUrl,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: ShaderMask(
+            shaderCallback: (bounds){
+              return LinearGradient(
+                colors: [Colors.transparent, Colors.black.withValues(alpha:0.7)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ).createShader(bounds);
+            },
+            blendMode: BlendMode.darken,
+            child: Image.network(
+              item.imageUrl,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: double.infinity,
+            ),
           ),
-
         ),
         Material(
           color: Colors.transparent,
