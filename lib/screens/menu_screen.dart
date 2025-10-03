@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olimpo/screens/about_us.dart';
 import 'package:olimpo/screens/athletes_screen.dart';
 import 'package:olimpo/screens/modalities_screen.dart';
 import 'package:olimpo/widgets/nav_bar.dart';
@@ -57,7 +58,11 @@ class MenuScreen extends StatelessWidget {
             ListTile(
               title: const Text('Sobre'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(
+                  context, 
+                  MaterialPageRoute(builder: (context) => const AboutUs()),
+                  (route) => route.isFirst
+                );
               },
             ),
           ],
