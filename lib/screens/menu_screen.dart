@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:olimpo/screens/athletes_screen.dart';
+import 'package:olimpo/screens/modalities_screen.dart';
 import 'package:olimpo/widgets/nav_bar.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -35,13 +37,21 @@ class MenuScreen extends StatelessWidget {
             ListTile(
               title: const Text('Modalidades'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ModalitiesScreen()),
+                  (route) => route.isFirst
+                );
               },
             ),
             ListTile(
               title: const Text('Atletas'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(
+                  context, 
+                  MaterialPageRoute(builder: (context) => const AthletesScreen()),
+                  (route) => route.isFirst
+                );
               },
             ),
             ListTile(
