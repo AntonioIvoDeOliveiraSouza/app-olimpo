@@ -18,14 +18,13 @@ class MenuScreen extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: [
+          children: <Widget> [
             const DrawerHeader(
               decoration: BoxDecoration(color: Colors.blue),
-              child:  
-                Text('Olimpo', style: TextStyle(color: Colors.white, fontSize: 24)),
-                Text('Membros:', style: TextStyle(color: Colors.white, fontSize: 16)),
-                Text('Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
-                Text('Aplicação: Olimpo: informações sobre Olimpíadas', style: TextStyle(color: Colors.white, fontSize: 16)),
+              child:Text('Olimpo', style: TextStyle(color: Colors.white, fontSize: 24)),
+                //Text('Membros:', style: TextStyle(color: Colors.white, fontSize: 16)),
+                //Text('Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
+                //Text('Aplicação: Olimpo: informações sobre Olimpíadas', style: TextStyle(color: Colors.white, fontSize: 16)),
             ),
             ListTile(
               title: const Text('Home'),
