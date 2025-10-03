@@ -14,12 +14,11 @@ class AboutUs extends StatelessWidget {
             foregroundColor: Colors.white,
             title: const Text(appTitle)
         ),
-        body: const Column(
-            children: const [
-                Center(
-                    child: Text('Aplicação: Olimpo', style: TextStyle(color: Colors.white, fontSize: 24)),
-                    child: Text('Membros do grupo: Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
-                ),
+        body: const 
+        Column(
+            children: [
+                    Text('Aplicação: Olimpo', style: TextStyle(color: Colors.black, fontSize: 24)),
+                    Text('Membros do grupo: Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.black, fontSize: 16)),
             ],
         ),
       ),
