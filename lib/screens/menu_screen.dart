@@ -30,12 +30,6 @@ class MenuScreen extends StatelessWidget {
                 //Text('Aplicação: Olimpo: informações sobre Olimpíadas', style: TextStyle(color: Colors.white, fontSize: 16)),
             ),
             ListTile(
-              title: const Text('Home'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
               title: const Text('Modalidades'),
               onTap: () {
                 Navigator.pushAndRemoveUntil(
@@ -67,7 +61,7 @@ class MenuScreen extends StatelessWidget {
             ),
           ],
         ),
-      ), //TODO: Elaborar Sidedrawer;
+      ),
       body: Center(
         child: Image.asset(
           'lib/data/images/logo.png',
