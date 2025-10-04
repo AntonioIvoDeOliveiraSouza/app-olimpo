@@ -6,9 +6,7 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const String appTitle = 'Olimpo';
-    return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
@@ -21,7 +19,6 @@ class AboutUs extends StatelessWidget {
                     Text('Membros do grupo: Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.black, fontSize: 16)),
             ],
         ),
-      ),
     );
   }
 }
