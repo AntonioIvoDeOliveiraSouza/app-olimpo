@@ -9,9 +9,9 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.blue,
+      color: Colors.green[800],
       child: IconTheme(
-        data: IconThemeData(color: Colors.white),
+        data: IconThemeData(color: Colors.amber),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

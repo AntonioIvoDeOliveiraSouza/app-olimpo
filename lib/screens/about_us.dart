@@ -8,7 +8,7 @@ class AboutUs extends StatelessWidget {
     const String appTitle = 'Olimpo';
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.green[800],
             foregroundColor: Colors.white,
             title: const Text(appTitle)
         ),

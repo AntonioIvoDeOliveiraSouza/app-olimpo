@@ -13,7 +13,7 @@ class AthletesScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Atletas"),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green[800],
       ),
       body: GridView(
         padding: const EdgeInsets.all(16),

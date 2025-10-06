@@ -14,7 +14,7 @@ class BioAthletes extends StatelessWidget {
       appBar: AppBar(
         title: Text(bioathlete.title),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green[800],
       ),
       body: SingleChildScrollView(
         child: Column(

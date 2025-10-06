@@ -13,7 +13,7 @@ class SportScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(sport.title),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green[800],
       ),
       body: SingleChildScrollView(
         child: Column(

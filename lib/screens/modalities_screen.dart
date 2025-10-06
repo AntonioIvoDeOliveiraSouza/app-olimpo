@@ -13,7 +13,7 @@ class ModalitiesScreen extends StatelessWidget{
       appBar: AppBar(
         title: const Text('Modalidades'),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green[800],
       ),
       body: GridView(
         padding: const EdgeInsets.all(16),

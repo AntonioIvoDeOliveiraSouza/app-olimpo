@@ -16,14 +16,14 @@ class MenuScreen extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green[800],
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget> [
             const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.blue),
+              decoration: BoxDecoration(color: Colors.green),
               child:Text('Olimpo', style: TextStyle(color: Colors.white, fontSize: 24)),
                 //Text('Membros:', style: TextStyle(color: Colors.white, fontSize: 16)),
                 //Text('Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
