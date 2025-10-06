@@ -14,6 +14,7 @@ class AboutUs extends StatelessWidget {
         ),
         body: const 
         Column(
+          mainAxisAlignment: MainAxisAlignment.center,
             children: [
                     Text('Aplicação: Olimpo', style: TextStyle(color: Colors.black, fontSize: 24)),
                     Text('Membros do grupo: Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.black, fontSize: 16)),
