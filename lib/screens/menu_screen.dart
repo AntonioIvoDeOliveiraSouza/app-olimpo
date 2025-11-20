@@ -3,12 +3,16 @@ import 'package:olimpo/screens/about_us.dart';
 import 'package:olimpo/screens/athletes_screen.dart';
 import 'package:olimpo/screens/modalities_screen.dart';
 import 'package:olimpo/widgets/nav_bar.dart';
+import 'package:olimpo/config/preference_theme.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -17,6 +21,14 @@ class MenuScreen extends StatelessWidget {
         ),
         foregroundColor: Colors.white,
         backgroundColor: Colors.green[800],
+        actions: [
+          IconButton(
+            icon: Icon(isDark ? Icons.light_mode : Icons.dark_mode),
+            onPressed: (){
+              PreferenceTheme.setTema();
+            }
+          )
+        ],
       ),
       drawer: Drawer(
         child: ListView(
