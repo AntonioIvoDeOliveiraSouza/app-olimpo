@@ -25,7 +25,7 @@ class MenuScreen extends StatelessWidget {
           IconButton(
             icon: Icon(isDark ? Icons.light_mode : Icons.dark_mode),
             onPressed: (){
-              PreferenceTheme.setTema();
+              PreferenceTheme.toggleTema();
             }
           )
         ],
