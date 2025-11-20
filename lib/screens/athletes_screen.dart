@@ -12,8 +12,6 @@ class AthletesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Atletas"),
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.green[800],
       ),
       body: GridView(
         padding: const EdgeInsets.all(16),

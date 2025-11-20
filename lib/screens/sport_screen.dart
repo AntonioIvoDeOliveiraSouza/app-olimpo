@@ -12,8 +12,6 @@ class SportScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(sport.title),
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.green[800],
       ),
       body: SingleChildScrollView(
         child: Column(

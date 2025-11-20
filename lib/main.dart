@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             brightness: brightness, 
             
             appBarTheme: AppBarTheme(
-              backgroundColor: brightness == Brightness.dark ? Colors.black : Colors.green[800],
+              backgroundColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
               foregroundColor: Colors.white,
             ),
           ),
