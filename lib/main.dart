@@ -39,6 +39,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       valueListenable: PreferenceTheme.tema,
       builder: (BuildContext context, Brightness brightness, Widget? _) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             primarySwatch: Colors.deepPurple,
