@@ -44,6 +44,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           theme: ThemeData(
             primarySwatch: Colors.deepPurple,
             brightness: brightness, 
+            
+            appBarTheme: AppBarTheme(
+              backgroundColor: brightness == Brightness.dark ? Colors.black : Colors.green[800],
+              foregroundColor: Colors.white,
+            ),
           ),
           home: const MenuScreen(),
         );
