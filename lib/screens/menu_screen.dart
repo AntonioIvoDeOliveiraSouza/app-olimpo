@@ -20,7 +20,7 @@ class MenuScreen extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.green[800],
+        backgroundColor: isDark? Colors.black : Colors.green[800],
         actions: [
           IconButton(
             icon: Icon(isDark ? Icons.light_mode : Icons.dark_mode),
