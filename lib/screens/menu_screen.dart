@@ -60,6 +60,10 @@ class MenuScreen extends StatelessWidget {
               },
             ),
             ListTile(
+              title: const Text('Configurações'),
+              onTap: (){},
+            ),
+            ListTile(
               title: const Text('Sobre'),
               onTap: () {
                 Navigator.pushAndRemoveUntil(
