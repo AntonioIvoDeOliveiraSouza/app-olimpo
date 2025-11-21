@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olimpo/config/preference_theme.dart';
 
 class ConfigScreen extends StatelessWidget {
   const ConfigScreen({super.key});
@@ -12,9 +13,28 @@ class ConfigScreen extends StatelessWidget {
           style: TextStyle(color: Colors.white)
         ),
       ),
-      body: Center(
-        child: Text("Configurações bla bla bla"),
-      ),
+      body: ListView(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text("Escolha a cor do tema", style: TextStyle(fontSize: 18),)
+          ),
+          ListTile(
+            leading: CircleAvatar(backgroundColor: Colors.red,),
+            title: Text("Vermelho"),
+            onTap: (){
+              PreferenceTheme.changeColor(Colors.red);
+            },
+          ),
+          ListTile(
+            leading:  CircleAvatar(backgroundColor: Colors.green[800],),
+            title: Text("Verde"),
+            onTap: (){
+              PreferenceTheme.changeColor(Colors.green[800]!);
+            },
+          )
+        ],
+      )
     );
   }
 }
