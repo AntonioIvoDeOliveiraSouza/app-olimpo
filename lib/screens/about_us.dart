@@ -9,7 +9,7 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[800],
+        backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Colors.white,
         title: const Text('Olimpo'),
       ),

@@ -33,8 +33,8 @@ class MenuScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget> [
-            const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.green),
+            DrawerHeader(
+              decoration: BoxDecoration(color: Theme.of(context).primaryColor, ),
               child:Text('Olimpo', style: TextStyle(color: Colors.white, fontSize: 24)),
                 //Text('Membros:', style: TextStyle(color: Colors.white, fontSize: 16)),
                 //Text('Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
