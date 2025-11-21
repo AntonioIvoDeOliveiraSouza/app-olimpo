@@ -21,6 +21,7 @@ class AboutUs extends StatelessWidget {
 
   Widget _buildContent(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
+    final brightness = Theme.of(context).brightness;
 
     return SingleChildScrollView(
       child: Padding(
@@ -29,10 +30,10 @@ class AboutUs extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Olimpo',
               style: TextStyle(
-                color: Colors.black,
+                color: brightness == Brightness.dark ? Colors.white : Colors.black,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
               ),
@@ -42,7 +43,7 @@ class AboutUs extends StatelessWidget {
             Text(
               'Equipe de Desenvolvimento',
               style: TextStyle(
-                color: Colors.green[800],
+                color: brightness == Brightness.dark ? Colors.white : Colors.green[800],
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
