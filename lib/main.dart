@@ -45,20 +45,21 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
               theme: ThemeData(
+                useMaterial3: true,
                 colorScheme: ColorScheme.fromSeed(
                   seedColor: actualcolor,
                   brightness: brightness, 
                 ),
                 
-                primaryColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
+                primaryColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : actualcolor,
                 
                 appBarTheme: AppBarTheme(
-                  backgroundColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
+                  backgroundColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : actualcolor,
                   foregroundColor: Colors.white,
                 ),
 
                 bottomAppBarTheme: BottomAppBarThemeData(
-                  color: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
+                  color: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : actualcolor,
                 ),
               ),
               home: const MenuScreen(),
