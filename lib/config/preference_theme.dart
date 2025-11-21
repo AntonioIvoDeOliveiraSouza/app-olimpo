@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class PreferenceTheme {
   static ValueNotifier<Brightness> tema = ValueNotifier(Brightness.light);
-  static ValueNotifier<MaterialColor> color = ValueNotifier(Colors.green);
+  static ValueNotifier<Color> color = ValueNotifier(Colors.green[800]!);
 
   static void setTema(){
     tema.value = WidgetsBinding.instance.platformDispatcher.platformBrightness;
   }
 
-  static void changeColor(MaterialColor newColor){
+  static void changeColor(Color newColor){
     color.value = newColor;
   }
 
