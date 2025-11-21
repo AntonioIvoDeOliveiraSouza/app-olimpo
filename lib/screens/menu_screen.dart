@@ -4,6 +4,7 @@ import 'package:olimpo/screens/athletes_screen.dart';
 import 'package:olimpo/screens/modalities_screen.dart';
 import 'package:olimpo/widgets/nav_bar.dart';
 import 'package:olimpo/config/preference_theme.dart';
+import 'package:olimpo/screens/config_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -61,7 +62,13 @@ class MenuScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Configurações'),
-              onTap: (){},
+              onTap: (){
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ConfigScreen()),
+                  (route) => route.isFirst
+                );
+              },
             ),
             ListTile(
               title: const Text('Sobre'),
