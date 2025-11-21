@@ -20,10 +20,10 @@ class ConfigScreen extends StatelessWidget {
             child: Text("Escolha a cor do tema", style: TextStyle(fontSize: 18),)
           ),
           ListTile(
-            leading: CircleAvatar(backgroundColor: Colors.red,),
+            leading: CircleAvatar(backgroundColor: const Color.fromARGB(255, 167, 0, 0),),
             title: Text("Vermelho"),
             onTap: (){
-              PreferenceTheme.changeColor(Colors.red);
+              PreferenceTheme.changeColor(const Color.fromARGB(255, 167, 0, 0));
             },
           ),
           ListTile(
