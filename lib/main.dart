@@ -34,28 +34,36 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { //Two Builders - 1st: DarkTheme; 2nd: Colors
     return ValueListenableBuilder(
       valueListenable: PreferenceTheme.tema,
       builder: (BuildContext context, Brightness brightness, Widget? _) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.deepPurple,
-            brightness: brightness, 
-            primaryColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
-            
-            appBarTheme: AppBarTheme(
-              backgroundColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
-              foregroundColor: Colors.white,
-            ),
+        return ValueListenableBuilder(
+          valueListenable: PreferenceTheme.color, 
+          builder: (BuildContext context, Color actualcolor, Widget? _){
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              title: 'Flutter Demo',
+              theme: ThemeData(
+                colorScheme: ColorScheme.fromSeed(
+                  seedColor: actualcolor,
+                  brightness: brightness, 
+                ),
+                
+                primaryColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
+                
+                appBarTheme: AppBarTheme(
+                  backgroundColor: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
+                  foregroundColor: Colors.white,
+                ),
 
-            bottomAppBarTheme: BottomAppBarThemeData(
-              color: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
-            ),
-          ),
-          home: const MenuScreen(),
+                bottomAppBarTheme: BottomAppBarThemeData(
+                  color: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : Colors.green[800],
+                ),
+              ),
+              home: const MenuScreen(),
+            );
+          }
         );
       },
     );
