@@ -32,6 +32,20 @@ class ConfigScreen extends StatelessWidget {
             onTap: (){
               PreferenceTheme.changeColor(Colors.green[800]!);
             },
+          ),
+          ListTile(
+            leading: CircleAvatar(backgroundColor: Colors.blue[900]),
+            title: Text("Azul"),
+            onTap: (){
+              PreferenceTheme.changeColor(Colors.blue[900]!);
+            },
+          ),
+          ListTile(
+            leading: CircleAvatar(backgroundColor: Colors.pink),
+            title: Text("Rosa"),
+            onTap: (){
+              PreferenceTheme.changeColor(Colors.pink);
+            },
           )
         ],
       )
