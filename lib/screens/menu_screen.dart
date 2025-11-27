@@ -35,7 +35,11 @@ class MenuScreen extends StatelessWidget {
           children: <Widget> [
             DrawerHeader(
               decoration: BoxDecoration(color: Theme.of(context).primaryColor, ),
-              child:Text('Olimpo', style: TextStyle(color: Colors.white, fontSize: 24)),
+              child:Image.asset(
+                'lib/data/images/logo.png',
+                width: 50,
+                height: 50,
+              ),
                 //Text('Membros:', style: TextStyle(color: Colors.white, fontSize: 16)),
                 //Text('Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
                 //Text('Aplicação: Olimpo: informações sobre Olimpíadas', style: TextStyle(color: Colors.white, fontSize: 16)),
