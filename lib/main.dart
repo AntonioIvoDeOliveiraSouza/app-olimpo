@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:olimpo/screens/menu_screen.dart';
 import 'package:olimpo/config/preference_theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await PreferenceTheme.loadTheme();
+
   runApp(const MyApp());
 }
 
