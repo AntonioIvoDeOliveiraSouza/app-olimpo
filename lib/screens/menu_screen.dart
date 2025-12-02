@@ -5,6 +5,7 @@ import 'package:olimpo/screens/modalities_screen.dart';
 import 'package:olimpo/widgets/nav_bar.dart';
 import 'package:olimpo/config/preference_theme.dart';
 import 'package:olimpo/screens/config_screen.dart';
+import 'package:olimpo/screens/favorites_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -61,6 +62,16 @@ class MenuScreen extends StatelessWidget {
                   context, 
                   MaterialPageRoute(builder: (context) => const AthletesScreen()),
                   (route) => route.isFirst
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Favoritos'),
+              onTap: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FavoritesScreen()),
+                  (route) => route.isFirst,
                 );
               },
             ),

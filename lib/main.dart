@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:olimpo/screens/menu_screen.dart';
 import 'package:olimpo/config/preference_theme.dart';
 
@@ -7,7 +8,7 @@ void main() async {
 
   await PreferenceTheme.loadTheme();
 
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
