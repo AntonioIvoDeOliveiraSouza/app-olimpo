@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:olimpo/screens/menu_screen.dart';
 import 'package:olimpo/config/preference_theme.dart';
+import 'package:olimpo/screens/login_screen.dart';
+import 'package:olimpo/screens/register_screen.dart';
+import 'package:olimpo/screens/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,6 +52,19 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
+              // nova rota com login
+              initialRoute: '/splash',
+              routes: {
+                '/splash': (context) => const SplashScreen(),
+                'login': (context) => LoginScreen(),
+                '/register': (context) => RegisterScreen(),
+                '/menu': (context) => const MenuScreen(),
+              },
+              onGenerateRoute: (settings) {
+                return MaterialPageRoute(
+                  builder: (context) => const SplashScreen(),
+                );
+              },
               theme: ThemeData(
                 useMaterial3: true,
                 colorScheme: ColorScheme.fromSeed(
@@ -67,7 +83,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                   color: brightness == Brightness.dark ? const Color.fromARGB(255, 39, 0, 131) : actualcolor,
                 ),
               ),
-              home: const MenuScreen(),
             );
           }
         );

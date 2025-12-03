@@ -95,6 +95,18 @@ class MenuScreen extends StatelessWidget {
                 );
               },
             ),
+            const Divider(),
+            ListTile(
+              title: const Text('Sair'),
+              leading: const Icon(Icons.logout),
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  '/login',
+                  (route) => false
+                );
+              },
+            ),  
           ],
         ),
       ),
