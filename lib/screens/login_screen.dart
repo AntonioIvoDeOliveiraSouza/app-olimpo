@@ -15,6 +15,7 @@ class LoginScreen extends ConsumerWidget {
     final userState = ref.watch(userProvider);
     
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text("Login"),
         backgroundColor: Colors.green[700],
