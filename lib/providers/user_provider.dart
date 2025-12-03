@@ -1,4 +1,4 @@
-// providers/user_provider.dart
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/user_model.dart';
 import '../config/user_storage.dart';
@@ -8,7 +8,7 @@ class UserState {
   final UserModel? currentUser;
   final bool isLoading;
   final String? error;
-  final bool isInitialized; // Para controlar se já carregou do storage
+  final bool isInitialized; 
 
   UserState({
     this.currentUser,
@@ -32,7 +32,6 @@ class UserState {
   }
 }
 
-// Notifier para gerenciar as ações do usuário
 class UserNotifier extends StateNotifier<UserState> {
   UserNotifier() : super(UserState()) {
     // Carregar usuário automaticamente ao inicializar
@@ -41,16 +40,20 @@ class UserNotifier extends StateNotifier<UserState> {
 
   // Carregar usuário do storage
   Future<void> _loadUserFromStorage() async {
+    debugPrint('Iniciando carregamento do storage...');
     state = state.copyWith(isLoading: true);
     
     try {
       final user = await UserStorage.loadUser();
+      debugPrint('Usuário carregado: ${user?.email ?? "Nenhum usuário"}');
       state = state.copyWith(
         currentUser: user,
         isLoading: false,
         isInitialized: true,
       );
+      debugPrint('Estado atualizado - isInitialized: ${state.isInitialized}, isLoading: ${state.isLoading}, hasUser: ${state.currentUser != null}');
     } catch (e) {
+      debugPrint('Erro ao carregar usuário: $e');
       state = state.copyWith(
         isLoading: false,
         isInitialized: true,

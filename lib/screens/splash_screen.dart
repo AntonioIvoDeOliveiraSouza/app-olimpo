@@ -11,42 +11,33 @@ class SplashScreen extends ConsumerStatefulWidget {
 }
 
 class _SplashScreenState extends ConsumerState<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    _checkUserAndNavigate();
-  }
+  bool _hasNavigated = false;
 
-  Future<void> _checkUserAndNavigate() async {
-    // Aguardar um pouco para exibir a splash screen
-    await Future.delayed(const Duration(seconds: 2));
+  void _navigateToNextScreen(bool isLoggedIn) {
+    if (!mounted || _hasNavigated) return;
     
-    if (!mounted) return;
+    debugPrint('Preparando navegação para: ${isLoggedIn ? "/menu" : "/login"}');
+    _hasNavigated = true;
     
-    // Verificar o estado do usuário
-    final userState = ref.read(userProvider);
-    
-    // Aguardar até que o estado seja inicializado
-    if (!userState.isInitialized) {
-      await Future.delayed(const Duration(milliseconds: 500));
-    }
-    
-    if (!mounted) return;
-    
-    // Navegar para a tela apropriada
-    final user = ref.read(userProvider).currentUser;
-    
-    if (user != null) {
-      // Usuário está logado, ir para o menu
-      Navigator.pushReplacementNamed(context, '/menu');
-    } else {
-      // Usuário não está logado, ir para o login
-      Navigator.pushReplacementNamed(context, '/login');
-    }
+    Future.delayed(const Duration(seconds: 2), () {
+      if (!mounted) return;
+      
+      final route = isLoggedIn ? '/menu' : '/login';
+      debugPrint('Navegando para: $route');
+      Navigator.pushReplacementNamed(context, route);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    ref.listen(userProvider, (previous, next) {
+      debugPrint('Listen disparado - isInitialized: ${next.isInitialized}, isLoading: ${next.isLoading}');
+      if (next.isInitialized && !next.isLoading) {
+        debugPrint('Iniciando navegação');
+        _navigateToNextScreen(next.currentUser != null);
+      }
+    });
+
     return Scaffold(
       backgroundColor: Colors.green[700],
       body: Center(
@@ -55,11 +46,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
           children: [
             Image.asset(
               'lib/data/images/logo.png',
-              width: 50,
-              height: 50,
+              width: 100,
+              height: 100,
             ),
             const SizedBox(height: 20),
-            Text(
+            const Text(
               "Olimpo",
               style: TextStyle(
                 fontSize: 32,
@@ -68,7 +59,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
               ),
             ),
             const SizedBox(height: 40),
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             ),
           ],

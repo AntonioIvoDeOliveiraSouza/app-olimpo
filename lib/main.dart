@@ -56,7 +56,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               initialRoute: '/splash',
               routes: {
                 '/splash': (context) => const SplashScreen(),
-                'login': (context) => LoginScreen(),
+                '/login': (context) => LoginScreen(),
                 '/register': (context) => RegisterScreen(),
                 '/menu': (context) => const MenuScreen(),
               },
