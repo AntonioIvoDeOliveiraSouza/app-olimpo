@@ -127,10 +127,10 @@ const listAthlete = [
   ),
   Athlete(
     id: 'a2',
-    title: 'Ítalo Ferreira',
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/60/%C3%8Dtalo_Ferreira_durante_a_competi%C3%A7%C3%A3o.jpg',
-    biography: 'Ítalo Ferreira, nascido em Baía Formosa, Rio Grande do Norte, em 1994, tornou-se uma referência do surfe brasileiro ao conquistar a medalha de ouro nos Jogos Olímpicos de Tóquio 2020, primeira edição do surfe como esporte olímpico. Revelado nas praias potiguares e campeão do World Surf League em 2019, Ítalo é conhecido por seu estilo agressivo e aéreo, inspirando uma nova geração de surfistas brasileiros e colocando o país no mapa mundial do surfe competitivo.',
-    honors: '- Olimpíadas de Tóquio 2020 - Medalha de Ouro\n- Circuito Mundial de Surfe (WSL 2019) - Medalha de Ouro',
+    title: 'Filipe Toledo',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Filipe_Toledo_%282015%29.jpg',
+    biography: 'Filipe Toledo, nascido em 16 de abril de 1995, em Ubatuba, São Paulo, é um dos principais nomes do surfe profissional contemporâneo. Filho do ex-surfista Ricardo Toledo, ele cresceu em um ambiente profundamente ligado ao esporte e iniciou sua trajetória nas competições ainda na infância. Seu talento precoce, aliado à habilidade técnica refinada e a um estilo marcado por velocidade, fluidez e manobras aéreas de alto grau de dificuldade, rapidamente o destacou no cenário nacional e internacional.',
+    honors: '- WSL - Bicampeão 2021 e 2022\n- Rio Pro - Campeão 2015, 2018, 2019, 2023\n- J-Bay Open - Campeão 2017',
   ),
   Athlete(
     id: 'a3', 
@@ -201,5 +201,12 @@ const listAthlete = [
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Futebol_feminino_ol%C3%ADmpico-_Brasil_e_Su%C3%A9cia_no_Maracan%C3%A3_%2829033096805%29.jpg',
     biography: 'Marta Vieira da Silva, nascida em Dois Riachos, Alagoas, em 1986, é considerada uma das maiores jogadoras de futebol de todos os tempos. Referência mundial, conquistou inúmeros títulos individuais e coletivos, incluindo quatro medalhas olímpicas com a seleção brasileira. Conhecida por sua habilidade, visão de jogo e faro de gol, Marta ajudou a colocar o futebol feminino brasileiro em destaque nos palcos internacionais, sendo inspiração para gerações de atletas.',
     honors: '- Olimpíadas de Atenas 2004 - Medalha de Prata\n- Olimpíadas de Pequim 2008 - Medalha de Prata\n- Olimpíadas de Paris 2024 - Medalha de Prata'
-  )
+  ),
+  Athlete(
+    id: 'a13',
+    title: 'Ítalo Ferreira',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/60/%C3%8Dtalo_Ferreira_durante_a_competi%C3%A7%C3%A3o.jpg',
+    biography: 'Ítalo Ferreira, nascido em Baía Formosa, Rio Grande do Norte, em 1994, tornou-se uma referência do surfe brasileiro ao conquistar a medalha de ouro nos Jogos Olímpicos de Tóquio 2020, primeira edição do surfe como esporte olímpico. Revelado nas praias potiguares e campeão do World Surf League em 2019, Ítalo é conhecido por seu estilo agressivo e aéreo, inspirando uma nova geração de surfistas brasileiros e colocando o país no mapa mundial do surfe competitivo.',
+    honors: '- Olimpíadas de Tóquio 2020 - Medalha de Ouro\n- Circuito Mundial de Surfe (WSL 2019) - Medalha de Ouro',
+  ),
 ];
