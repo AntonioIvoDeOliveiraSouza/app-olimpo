@@ -1,4 +1,3 @@
-// screens/splash_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/user_provider.dart';
@@ -12,56 +11,83 @@ class SplashScreen extends ConsumerStatefulWidget {
 
 class _SplashScreenState extends ConsumerState<SplashScreen> {
   bool _hasNavigated = false;
+  
+  bool _animationComplete = false; 
 
-  void _navigateToNextScreen(bool isLoggedIn) {
-    if (!mounted || _hasNavigated) return;
-    
-    debugPrint('Preparando navegação para: ${isLoggedIn ? "/menu" : "/login"}');
+  @override
+  void initState() {
+    super.initState();
+    _startMinimumTimer();
+  }
+
+  Future<void> _startMinimumTimer() async {
+    await Future.delayed(const Duration(seconds: 3));
+
+    if (mounted) {
+      setState(() {
+        _animationComplete = true;
+      });
+      _checkAndNavigate();
+    }
+  }
+
+  void _checkAndNavigate() {
+    if (_hasNavigated || !_animationComplete) return;
+    final userState = ref.read(userProvider);
+    if (userState.isInitialized && !userState.isLoading) {
+      _finalizeNavigation(userState.currentUser != null);
+    }
+  }
+
+  void _finalizeNavigation(bool isLoggedIn) {
+    if (!mounted) return;
     _hasNavigated = true;
     
-    Future.delayed(const Duration(seconds: 2), () {
-      if (!mounted) return;
-      
-      final route = isLoggedIn ? '/menu' : '/login';
-      debugPrint('Navegando para: $route');
-      Navigator.pushReplacementNamed(context, route);
-    });
+    final route = isLoggedIn ? '/menu' : '/login';
+    debugPrint('Navigating to: $route');
+    
+    Navigator.of(context).pushNamedAndRemoveUntil(route, (route) => false);
   }
 
   @override
   Widget build(BuildContext context) {
     ref.listen(userProvider, (previous, next) {
-      debugPrint('Listen disparado - isInitialized: ${next.isInitialized}, isLoading: ${next.isLoading}');
       if (next.isInitialized && !next.isLoading) {
-        debugPrint('Iniciando navegação');
-        _navigateToNextScreen(next.currentUser != null);
+        _checkAndNavigate();
       }
     });
 
     return Scaffold(
-      backgroundColor: Colors.green[700],
+      backgroundColor: Theme.of(context).primaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               'lib/data/images/logo.png',
-              width: 100,
-              height: 100,
+              width: 120,
+              height: 120,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 24),
             const Text(
               "Olimpo",
               style: TextStyle(
-                fontSize: 32,
+                fontSize: 36,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
+                letterSpacing: 1.5,
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 48),
             const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              strokeWidth: 3,
             ),
+            const SizedBox(height: 16),
+            const Text(
+              "Carregando...",
+              style: TextStyle(color: Colors.white70, fontSize: 14),
+            )
           ],
         ),
       ),
