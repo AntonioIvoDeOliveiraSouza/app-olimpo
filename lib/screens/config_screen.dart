@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:olimpo/config/preference_theme.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:olimpo/config/profile_controller.dart';
 
 class ConfigScreen extends StatelessWidget {
   const ConfigScreen({super.key});
@@ -7,6 +9,36 @@ class ConfigScreen extends StatelessWidget {
   void _atualizarTema(BuildContext context, Color novaCor) {
     PreferenceTheme.changeColor(novaCor);
     Navigator.pushNamedAndRemoveUntil(context, '/splash', (route) => false);
+  }
+
+  void _showImageOptions(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return SafeArea(
+          child: Wrap(
+            children: [
+              ListTile(
+                leading: const Icon(Icons.photo_library),
+                title: const Text("Galeria"),
+                onTap: () {
+                  Navigator.pop(context); // Fecha o modal
+                  ProfileController.pickImage(ImageSource.gallery);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.camera_alt),
+                title: const Text("Câmera"),
+                onTap: () {
+                  Navigator.pop(context);
+                  ProfileController.pickImage(ImageSource.camera);
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -51,7 +83,25 @@ class ConfigScreen extends StatelessWidget {
             onTap: () {
               _atualizarTema(context, Colors.pink);
             },
-          )
+          ),
+
+          const Divider(),
+
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text("Perfil", style: TextStyle(fontSize: 18)),
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.person, size: 30),
+            title: const Text("Alterar Foto de Perfil"),
+            subtitle: const Text("Toque para escolher"),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              _showImageOptions(context);
+            },
+          ),
+
         ],
       ),
     );
