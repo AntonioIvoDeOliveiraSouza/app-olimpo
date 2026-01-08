@@ -5,11 +5,13 @@ import 'package:olimpo/config/preference_theme.dart';
 import 'package:olimpo/screens/login_screen.dart';
 import 'package:olimpo/screens/register_screen.dart';
 import 'package:olimpo/screens/splash_screen.dart';
+import 'package:olimpo/config/profile_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await PreferenceTheme.loadTheme();
+  await ProfileController.loadSavedImage;
 
   runApp(const ProviderScope(child: MyApp()));
 }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:olimpo/screens/about_us.dart';
 import 'package:olimpo/screens/athletes_screen.dart';
@@ -6,6 +8,7 @@ import 'package:olimpo/widgets/nav_bar.dart';
 import 'package:olimpo/config/preference_theme.dart';
 import 'package:olimpo/screens/config_screen.dart';
 import 'package:olimpo/screens/favorites_screen.dart';
+import 'package:olimpo/config/profile_controller.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -36,10 +39,21 @@ class MenuScreen extends StatelessWidget {
           children: <Widget> [
             DrawerHeader(
               decoration: BoxDecoration(color: Theme.of(context).primaryColor, ),
-              child:CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('assets/images/user.png')
-              )
+              child:Center( // Center ajuda no alinhamento
+                child: ValueListenableBuilder<File?>(
+                  valueListenable: ProfileController.imageNotifier,
+                  builder: (context, file, _) {
+                    return CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.grey[200], // Cor de fundo enquanto carrega
+                      // LÓGICA: Se tem arquivo (file), usa FileImage. Se não, usa AssetImage (padrão)
+                      backgroundImage: file != null 
+                          ? FileImage(file) 
+                          : const AssetImage('lib/assets/images/user.png') as ImageProvider,
+                    );
+                  },
+                ),
+              ),
             ),
             ListTile(
               title: const Text('Modalidades'),
@@ -108,7 +122,7 @@ class MenuScreen extends StatelessWidget {
       ),
       body: Center(
         child: Image.asset(
-          'assets/images/logo.png',
+          'lib/assets/images/logo.png',
           width: 200,
           height: 200,
         ),
