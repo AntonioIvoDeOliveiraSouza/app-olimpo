@@ -18,7 +18,7 @@ class WatermarkBackground extends StatelessWidget {
           child: Opacity(
             opacity: 0.1,
               child: Image.asset(
-                'lib/data/images/logo.png',
+                'lib/assets/images/logo.png',
                 width: screenWidth * 0.6,
                 fit: BoxFit.contain,
               ),

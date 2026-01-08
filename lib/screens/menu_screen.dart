@@ -36,14 +36,10 @@ class MenuScreen extends StatelessWidget {
           children: <Widget> [
             DrawerHeader(
               decoration: BoxDecoration(color: Theme.of(context).primaryColor, ),
-              child:Image.asset(
-                'lib/data/images/logo.png',
-                width: 50,
-                height: 50,
-              ),
-                //Text('Membros:', style: TextStyle(color: Colors.white, fontSize: 16)),
-                //Text('Antonio Ivo, Giovanna, Hyann Gabriel e Juliana', style: TextStyle(color: Colors.white, fontSize: 16)),
-                //Text('Aplicação: Olimpo: informações sobre Olimpíadas', style: TextStyle(color: Colors.white, fontSize: 16)),
+              child:CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('lib/assets/images/user.png')
+              )
             ),
             ListTile(
               title: const Text('Modalidades'),
@@ -112,7 +108,7 @@ class MenuScreen extends StatelessWidget {
       ),
       body: Center(
         child: Image.asset(
-          'lib/data/images/logo.png',
+          'lib/assets/images/logo.png',
           width: 200,
           height: 200,
         ),
