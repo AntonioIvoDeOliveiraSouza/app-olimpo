@@ -4,51 +4,56 @@ import 'package:olimpo/config/preference_theme.dart';
 class ConfigScreen extends StatelessWidget {
   const ConfigScreen({super.key});
 
+  void _atualizarTema(BuildContext context, Color novaCor) {
+    PreferenceTheme.changeColor(novaCor);
+    Navigator.pushNamedAndRemoveUntil(context, '/splash', (route) => false);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Configurações",
-          style: TextStyle(color: Colors.white)
+          style: TextStyle(color: Colors.white),
         ),
       ),
       body: ListView(
         children: [
           const Padding(
             padding: EdgeInsets.all(16.0),
-            child: Text("Escolha a cor do tema", style: TextStyle(fontSize: 18),)
+            child: Text("Escolha a cor do tema", style: TextStyle(fontSize: 18)),
           ),
           ListTile(
-            leading: CircleAvatar(backgroundColor: const Color.fromARGB(255, 167, 0, 0),),
-            title: Text("Vermelho"),
-            onTap: (){
-              PreferenceTheme.changeColor(const Color.fromARGB(255, 167, 0, 0));
+            leading: const CircleAvatar(backgroundColor: Color.fromARGB(255, 167, 0, 0)),
+            title: const Text("Vermelho"),
+            onTap: () {
+              _atualizarTema(context, const Color.fromARGB(255, 167, 0, 0));
             },
           ),
           ListTile(
-            leading:  CircleAvatar(backgroundColor: Colors.green[800],),
-            title: Text("Verde"),
-            onTap: (){
-              PreferenceTheme.changeColor(Colors.green[800]!);
+            leading: CircleAvatar(backgroundColor: Colors.green[800]),
+            title: const Text("Verde"),
+            onTap: () {
+              _atualizarTema(context, Colors.green[800]!);
             },
           ),
           ListTile(
             leading: CircleAvatar(backgroundColor: Colors.blue[900]),
-            title: Text("Azul"),
-            onTap: (){
-              PreferenceTheme.changeColor(Colors.blue[900]!);
+            title: const Text("Azul"),
+            onTap: () {
+              _atualizarTema(context, Colors.blue[900]!);
             },
           ),
           ListTile(
-            leading: CircleAvatar(backgroundColor: Colors.pink),
-            title: Text("Rosa"),
-            onTap: (){
-              PreferenceTheme.changeColor(Colors.pink);
+            leading: const CircleAvatar(backgroundColor: Colors.pink),
+            title: const Text("Rosa"),
+            onTap: () {
+              _atualizarTema(context, Colors.pink);
             },
           )
         ],
-      )
+      ),
     );
   }
 }
