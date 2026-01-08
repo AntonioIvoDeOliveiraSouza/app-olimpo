@@ -38,7 +38,7 @@ class MenuScreen extends StatelessWidget {
               decoration: BoxDecoration(color: Theme.of(context).primaryColor, ),
               child:CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('lib/assets/images/user.png')
+                backgroundImage: AssetImage('assets/images/user.png')
               )
             ),
             ListTile(
@@ -108,7 +108,7 @@ class MenuScreen extends StatelessWidget {
       ),
       body: Center(
         child: Image.asset(
-          'lib/assets/images/logo.png',
+          'assets/images/logo.png',
           width: 200,
           height: 200,
         ),
