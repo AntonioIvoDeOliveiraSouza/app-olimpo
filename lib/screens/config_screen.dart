@@ -23,7 +23,7 @@ class ConfigScreen extends StatelessWidget {
                 title: const Text("Galeria"),
                 onTap: () {
                   Navigator.pop(context); // Fecha o modal
-                  ProfileController.pickImage(ImageSource.gallery);
+                  ProfileController.pickImage(context, ImageSource.gallery);
                 },
               ),
               ListTile(
@@ -31,7 +31,7 @@ class ConfigScreen extends StatelessWidget {
                 title: const Text("Câmera"),
                 onTap: () {
                   Navigator.pop(context);
-                  ProfileController.pickImage(ImageSource.camera);
+                  ProfileController.pickImage(context, ImageSource.camera);
                 },
               ),
             ],
