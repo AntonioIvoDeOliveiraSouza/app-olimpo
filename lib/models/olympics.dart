@@ -8,7 +8,7 @@ class Modality implements GridItemData{
     required this.imageUrl,
     required this.history,
     required this.rules,
-    this.color = Colors.orange});
+    this.color = Colors.blue});
 
   @override
   final String id;
@@ -20,4 +20,12 @@ class Modality implements GridItemData{
   final String rules;
   @override
   final Color color;
+}
+
+factory Olympics.fromMap(Map<String, dynamic> map, String documentId) {
+  return Olympics(
+    id: documentId,
+    title: map['title'] ?? 'Sem Título',
+    imageUrl: map['imageUrl'] ?? '',    
+  );
 }
