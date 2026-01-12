@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:olimpo/screens/athletes_screen.dart';
 import 'package:olimpo/screens/modalities_screen.dart';
+import 'package:olimpo/screens/olympics_screen.dart';
 
 class NavBar extends StatelessWidget {
   final BuildContext parentContext;
@@ -25,7 +26,7 @@ class NavBar extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: Icon(Icons.sports_gymnastics),
+              icon: Icon(Icons.face),
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
                   parentContext,
@@ -34,6 +35,16 @@ class NavBar extends StatelessWidget {
                 );
               }
             ),
+            IconButton(
+              icon: Icon(Icons.flag),
+              onPressed: (){
+                Navigator.pushAndRemoveUntil(
+                  parentContext,
+                  MaterialPageRoute(builder: (context) => const OlympicsScreen()),
+                  (route) => route.isFirst,
+                );
+              },
+            )
           ],
         ),
       ),
