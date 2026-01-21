@@ -6,9 +6,15 @@ import 'package:olimpo/screens/login_screen.dart';
 import 'package:olimpo/screens/register_screen.dart';
 import 'package:olimpo/screens/splash_screen.dart';
 import 'package:olimpo/config/profile_controller.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   await PreferenceTheme.loadTheme();
   await ProfileController.loadSavedImage;

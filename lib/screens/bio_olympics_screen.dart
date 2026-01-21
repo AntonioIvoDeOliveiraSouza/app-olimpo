@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:olimpo/models/athlete.dart';
+import 'package:olimpo/models/olympics.dart';
 import 'package:olimpo/providers/favorites_providers.dart';
 import 'package:olimpo/widgets/nav_bar.dart';
 
 
-class BioAthletes extends ConsumerWidget {
-  const BioAthletes({super.key, required this.bioathlete});
+class BioOlympics extends ConsumerWidget {
+  const BioOlympics({super.key, required this.bioolympics});
 
-  final Athlete bioathlete;
+  final Olympics bioolympics;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final favIds = ref.watch(favoriteAthletesProvider);
-    final isFav = favIds.contains(bioathlete.id);
+    final isFav = favIds.contains(bioolympics.id);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(bioathlete.title),
+        title: Text(bioolympics.title),
         actions: [
           IconButton(
             onPressed: () {
               final wasFav = isFav;
-              ref.read(favoriteAthletesProvider.notifier).toggle(bioathlete.id);
+              ref.read(favoriteAthletesProvider.notifier).toggle(bioolympics.id);
 
               ScaffoldMessenger.of(context).hideCurrentSnackBar();
               ScaffoldMessenger.of(context).showSnackBar(
@@ -31,7 +31,7 @@ class BioAthletes extends ConsumerWidget {
                   action: SnackBarAction(
                     label: 'Desfazer',
                     onPressed: () {
-                      ref.read(favoriteAthletesProvider.notifier).toggle(bioathlete.id);
+                      ref.read(favoriteAthletesProvider.notifier).toggle(bioolympics.id);
                     },
                   ),
                 ),
@@ -46,7 +46,7 @@ class BioAthletes extends ConsumerWidget {
         child: Column(
           children: [
             Image.network(
-              bioathlete.imageUrl,
+              bioolympics.imageUrl,
               height: 180, 
               width: double.infinity,
               fit: BoxFit.cover,
@@ -54,7 +54,7 @@ class BioAthletes extends ConsumerWidget {
             
             const SizedBox(height: 14),
             Text(
-              'Biografia',
+              'Resumo',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.bold,
@@ -65,14 +65,14 @@ class BioAthletes extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                bioathlete.biography,
+                bioolympics.history,
                 style: Theme.of(context).textTheme.bodyMedium,
                 textAlign: TextAlign.justify,
               ),
             ),
             const SizedBox(height: 14),
             Text(
-              'Premiações',
+              'País anfitrião',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class BioAthletes extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                bioathlete.honors,
+                bioolympics.country,
                 style: Theme.of(context).textTheme.bodyMedium,
                 textAlign: TextAlign.justify,
               ),

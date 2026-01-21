@@ -20,15 +20,15 @@ class ConfigScreen extends StatelessWidget {
             children: [
               ListTile(
                 leading: const Icon(Icons.photo_library),
-                title: const Text("Galeria"),
+                title: const Text("Galeria"), //PEGA FOTO DA GALERIA
                 onTap: () {
-                  Navigator.pop(context); // Fecha o modal
+                  Navigator.pop(context);
                   ProfileController.pickImage(context, ImageSource.gallery);
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.camera_alt),
-                title: const Text("Câmera"),
+                title: const Text("Câmera"), //TIRA FOTO DA CÂMERA
                 onTap: () {
                   Navigator.pop(context);
                   ProfileController.pickImage(context, ImageSource.camera);

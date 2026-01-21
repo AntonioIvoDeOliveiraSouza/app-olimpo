@@ -53,8 +53,6 @@ class ProfileController {
                status = PermissionStatus.denied;
             }
          }
-      } else if (Platform.isIOS) {
-        status = await Permission.photos.request();
       } else {
         status = PermissionStatus.denied;
       }

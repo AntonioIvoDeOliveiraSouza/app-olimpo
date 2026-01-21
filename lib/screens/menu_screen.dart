@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:olimpo/screens/about_us.dart';
 import 'package:olimpo/screens/athletes_screen.dart';
@@ -39,14 +38,13 @@ class MenuScreen extends StatelessWidget {
           children: <Widget> [
             DrawerHeader(
               decoration: BoxDecoration(color: Theme.of(context).primaryColor, ),
-              child:Center( // Center ajuda no alinhamento
+              child:Center(
                 child: ValueListenableBuilder<File?>(
                   valueListenable: ProfileController.imageNotifier,
                   builder: (context, file, _) {
                     return CircleAvatar(
                       radius: 50,
-                      backgroundColor: Colors.grey[200], // Cor de fundo enquanto carrega
-                      // LÓGICA: Se tem arquivo (file), usa FileImage. Se não, usa AssetImage (padrão)
+                      backgroundColor: Colors.grey[200], // Cor de fundo
                       backgroundImage: file != null 
                           ? FileImage(file) 
                           : const AssetImage('lib/assets/images/user.png') as ImageProvider,

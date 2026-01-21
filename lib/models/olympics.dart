@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:olimpo/models/basic_model.dart';
 
-class Modality implements GridItemData{
-  const Modality({
+class Olympics implements GridItemData{
+  const Olympics({
     required this.id,
     required this.title,
     required this.imageUrl,
     required this.history,
-    required this.rules,
+    required this.country,
     this.color = Colors.blue});
 
   @override
@@ -17,15 +17,17 @@ class Modality implements GridItemData{
   @override
   final String imageUrl;
   final String history;
-  final String rules;
+  final String country;
   @override
   final Color color;
-}
 
-factory Olympics.fromMap(Map<String, dynamic> map, String documentId) {
-  return Olympics(
-    id: documentId,
-    title: map['title'] ?? 'Sem Título',
-    imageUrl: map['imageUrl'] ?? '',    
-  );
+  factory Olympics.fromMap(Map<String, dynamic> map, String documentId) {
+    return Olympics(
+      id: documentId,
+      title: map['title'] ?? 'Sem Título',
+      imageUrl: map['imageUrl'] ?? '',    
+      history: map['history'] ?? '',
+      country: map['country'] ?? '',
+    );
+  }
 }
